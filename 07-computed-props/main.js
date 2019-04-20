@@ -4,7 +4,7 @@ var app = new Vue({
         product: 'Socks',
         image: 'vuesocks-green.jpg',
         url: 'http://theoldowlsscarf.com',
-        inventory: 10,
+        inventory: 100,
         inStock: true,
         onSale: false,
         details: [
@@ -23,10 +23,6 @@ var app = new Vue({
     methods: {
         addToCart(){
             this.cart += 1
-            this.inventory --
-            if (this.inventory < 1) {
-                this.inStock = false
-            }
         },
         updateImage(url) {
             this.image = url
